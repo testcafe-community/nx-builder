@@ -12,6 +12,9 @@
     "type": "git",
     "url": "git+https://github.com/testcafe-community/nx-builder.git"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "typings": "typings",
   "keywords": [
     "angular",
