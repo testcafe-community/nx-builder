@@ -110,7 +110,7 @@
           }
         },
         "e2e": {
-          "builder": "@politie/angular-testcafe-builder:testcafe",
+          "builder": "@testcafe-community/nx-builder-builder:testcafe",
           "options": {
             "browsers": [
               "chrome --no-sandbox --window-size=1920,1080"

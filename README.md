@@ -1,10 +1,10 @@
-# angular-testcafe [![Build Status](https://travis-ci.org/politie/angular-testcafe.svg?branch=master)](https://travis-ci.org/politie/angular-testcafe)
+# angular-testcafe [![Build Status](https://travis-ci.org/testcafe-community/nx-builder.svg?branch=master)](https://travis-ci.org/testcafe-community/nx-builder)
 A custom Angular builder for [TestCafe](http://devexpress.github.io/testcafe/).
 Serves the Angular application, and then runs the TestCafe tests.
 
 ## Install
 ```bash
-$ npm install --save-dev @politie/angular-testcafe-builder
+$ npm install --save-dev @testcafe-community/nx-builder-builder
 ```
 
 ## Use in angular.json
@@ -14,7 +14,7 @@ $ npm install --save-dev @politie/angular-testcafe-builder
     "my-project-e2e": {
       "architect": {
         "e2e": {
-          "builder": "@politie/angular-testcafe-builder:testcafe",
+          "builder": "@testcafe-community/nx-builder-builder:testcafe",
           "options": {
             "browsers": [
               "chrome --no-sandbox",
