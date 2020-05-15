@@ -1,4 +1,4 @@
-# @testcafe-community/nx-builder [![Build Status](https://travis-ci.org/testcafe-community/nx-builder.svg?branch=master)](https://travis-ci.org/testcafe-community/nx-builder)
+# @testcafe-community/nx-builder 
 A custom Angular/nx builder for [TestCafe](http://devexpress.github.io/testcafe/).
 Serves the Angular/nx application, and then runs the TestCafe tests.  Forked from https://github.com/politie/angular-testcafe
 
