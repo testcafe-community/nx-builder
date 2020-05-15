@@ -29,9 +29,9 @@ async function runTestcafe(opts: TestcafeBuilderOptions, hostName) {
 
 	runner.isCli = true;
 
-	return runner
+	runner
 		.useProxy(proxy, proxyBypass)
-		.src(opts.src instanceof Array ? opts.src : [ opts.src ])
+		.src(opts.src instanceof Array ? opts.src : [opts.src])
 		.tsConfigPath(opts.tsConfigPath)
 		.browsers(opts.browsers)
 		.clientScripts(opts.clientScripts || [])
@@ -55,8 +55,13 @@ async function runTestcafe(opts: TestcafeBuilderOptions, hostName) {
 
 			return true;
 		})
-		.screenshots(opts.screenshots)
-		.video(opts.video.path, opts.video.options, opts.video.encodingOptions)
+		.screenshots(opts.screenshots);
+
+	if (opts.video.path) {
+		runner
+			.video(opts.video.path, opts.video.options, opts.video.encodingOptions)
+	}
+	return runner
 		.run({
 			allowMultipleWindows: opts.allowMultipleWindows,
 			assertionTimeout: opts.assertionTimeout,
@@ -91,7 +96,7 @@ async function execute(
 	}
 
 	try {
-	    const host = serverOptions ? serverOptions.host : options.host;
+		const host = serverOptions ? serverOptions.host : options.host;
 		const failedCount = await runTestcafe(options, host);
 		if (failedCount > 0) {
 			return { success: false }
