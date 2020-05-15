@@ -110,10 +110,10 @@
           }
         },
         "e2e": {
-          "builder": "@testcafe-community/nx-builder-builder:testcafe",
+          "builder": "@testcafe-community/nx-builder:testcafe",
           "options": {
             "browsers": [
-              "chrome --no-sandbox --window-size=1920,1080"
+              "chrome:headless"
             ],
             "screenshots": {
               "path": "./target/testreport/screenshots",
