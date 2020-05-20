@@ -29,6 +29,9 @@ async function runTestcafe(opts: TestcafeBuilderOptions, hostName) {
 
 	runner.isCli = true;
 
+	if(typeof opts.browsers === 'string') {
+		opts.browsers = opts.browsers.split(",").map(browser => browser.trim())
+	}
 	runner
 		.useProxy(proxy, proxyBypass)
 		.src(opts.src instanceof Array ? opts.src : [opts.src])

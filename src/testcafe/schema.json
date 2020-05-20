@@ -9,12 +9,21 @@
       "description": "[TestCafe] set the amount of time within which assertion should pass"
     },
     "browsers": {
-      "type": "array",
       "description": "[TestCafe] browsers to run the tests on",
-      "items": {
-        "type": "string",
-        "description": "name of the browser including arguments"
-      },
+      "oneOf": [
+        {
+          "type": "array",
+          "description": "[TestCafe] list of browsers to run the tests on",
+          "items": {
+            "type": "string",
+            "description": "name of the browser including arguments"
+          }
+        },
+        {
+          "type": "string",
+          "description": "[TestCafe] comma seperated list of the browser names"
+        }
+      ],
       "default": [
         "chrome"
       ]
